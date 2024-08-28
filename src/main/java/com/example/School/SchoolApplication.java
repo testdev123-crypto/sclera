@@ -16,7 +16,9 @@ public class SchoolApplication {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		System.out.println("Sharan");
 		SpringApplication.run(SchoolApplication.class, args);
+		System.out.println("Hello");
 	}
 
 }
