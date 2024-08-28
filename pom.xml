@@ -14,20 +14,19 @@
 	<name>School</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
-		<mvn.compiler.source>${java.version}</mvn.compiler.source>
-		<mvn.compiler.target>${java.version}</mvn.compiler.target>
+		<java.version>17</java.version>
+		<mvn.compiler.source>17</mvn.compiler.source>
+		<mvn.compiler.target>17</mvn.compiler.target>
 		<cxf.version>4.0.3</cxf.version>
+		<sonar.projectKey>testdev123-crypto_sclera</sonar.projectKey>
+		<sonar.organization>testdev123-crypto</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-		<!--		<dependency>-->
-		<!--			<groupId>org.springframework.boot</groupId>-->
-		<!--			<artifactId>spring-boot-starter-web-services</artifactId>-->
-		<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -95,12 +94,6 @@
 			<version>14.7.2</version>
 		</dependency>
 
-		<!--		&lt;!&ndash; https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind &ndash;&gt;-->
-		<!--		<dependency>-->
-		<!--			<groupId>com.fasterxml.jackson.core</groupId>-->
-		<!--			<artifactId>jackson-databind</artifactId>-->
-		<!--			<version>2.15.2</version>-->
-		<!--		</dependency>-->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
@@ -165,6 +158,11 @@
 			<artifactId>spring-ws-core</artifactId>
 			<version>4.0.5</version>
 		</dependency>
+		<dependency>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>4.0.0.4121</version>
+		</dependency>
 
 	</dependencies>
 
@@ -179,8 +177,11 @@
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-codegen-plugin</artifactId>
 				<version>${cxf.version}</version>
-
-
+			</plugin>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.11.0.3922</version>
 			</plugin>
 
 		</plugins>
