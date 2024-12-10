@@ -17,6 +17,7 @@ public class SchoolApplication {
 			e.printStackTrace();
 		}
 		SpringApplication.run(SchoolApplication.class, args);
+		System.out.println("Hi");
 	}
 
 }
